@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dlacky Beserto Shop</title>
+    <link rel="stylesheet" href="projeect_shop.css"> <!-- Style css -->
+
+    <style>
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 2);
+            z-index: 1;
+        }
+        .dropdown-content a{
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover{
+            background-color: #f1f1f1;           
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+        .user-greeting{
+            margin-right: 20px;
+            position: relative;
+        }
+
+    </style>
+
+</head>
+<body style="background-color: white;">
+    <header>
+        <div class="logo">
+            <h1>Dlacky Beserto</h1>
+        </div>
+        <nav class="navbar">
+            <ul id="menu"> 
+                <li><a href="Shop"> Shop </a></li>
+                <li><a href="Events"> Events </a></li>
+                <li><a href="#Home">Announcements</a></li>
+                <li><a href="#about">Learn More</a></li>
+                <li><a href="Support_projeect.html" target="_blank">Support</a></li> 
+            </ul>
+    </nav>
+    <div class="dropdown">
+        <span class="user-greeting">Hello, User </span>
+            <div class="dropdown-content">
+                <a href="#Profile"> Profile </a>
+                <a href="Settings"> Settings </a>
+                <a href="#" onclick="logout()">Logout </a>
+            </div>
+    </div>
+
+    </header>
+      
+    <div class="card-container">
+        <div class="card">
+            <img src="shop 1.JPG" alt="Denim Jeans" style="width:100%">
+            <h1>Item One</h1>
+            <p class="price">$19.99</p>
+            <p>White Cloth..</p>
+            <p><button>Add to Cart</button></p>
+        </div> 
+
+        <div class="card">
+            <img src="BDO2.jpg" alt="Denim Jeans" style="width:100%">
+            <h1>Item Two</h1>
+            <p class="price">$19.99</p>
+            <p>The Executioner Outfit..</p>
+            <p><button>Add to Cart</button></p>
+        </div> 
+
+        <div class="card">
+            <img src="2023-3.JPG" alt="Denim Jeans" style="width:100%">
+            <h1>Item Three</h1>
+            <p class="price">$19.99</p>
+            <p>La Orzeca Outfit</p>
+            <p><button>Add to Cart</button></p>
+        </div> 
+
+        <div class="card">
+            <img src="2023-4.JPG" alt="Denim Jeans" style="width:100%">
+            <h1>Item Four</h1>
+            <p class="price">$19.99</p>
+            <p>Black Shudad..</p>
+            <p><button>Add to Cart</button></p>
+        </div> 
+    </div>
+    
+    <div class="card-container2">
+        <div class="card">
+            <img src="shop 2.jpg" alt="Denim Jeans" style="width:100%">
+            <h1>Item five</h1>
+            <p class="price">$19.99</p>
+            <p>Academy Outfit..</p>
+            <p><button>Add to Cart</button></p>
+        </div> 
+
+        <div class="card">
+            <img src="shop3.jpg" alt="Denim Jeans" style="width:100%">
+            <h1>Item Six</h1>
+            <p class="price">$19.99</p>
+            <p>FBI..</p>
+            <p><button>Add to Cart</button></p>
+        </div> 
+
+        <div class="card">
+            <img src="shop4.jpg" alt="Denim Jeans" style="width:100%">
+            <h1>Item seven</h1>
+            <p class="price">$19.99</p>
+            <p>Fairy Pet..</p>
+            <p><button>Add to Cart</button></p>
+        </div> 
+
+        <div class="card">
+            <img src="shop5.jpg" alt="Denim Jeans" style="width:100%">
+            <h1>Item eight</h1>
+            <p class="price">$19.99</p>
+            <p>Crimson Outfit..</p>
+            <p><button>Add to Cart</button></p>
+        </div> 
+    </div>
+
+  
+
+
+    <footer>
+        <p>&copy; 2024 Syak ni Dadym. All rights reserved.</p>
+    </footer>
+
+    <!--Script-->
+    <script>
+
+ 
+
+        //Hello User
+        document.addEventListener("DOMContentLoaded" , function(){
+            var username = localStorage.getItem("username");
+            if(username){
+                document.getElementById("user-greeting").textContent = "Hello, " + username;
+            }
+        });
+
+        function logout(){
+            localStorage.removeItem("username");
+            window.location.href = "login-form.html";
+        }
+    
+    </script>
+    
+
+
+</body>
+</html>
